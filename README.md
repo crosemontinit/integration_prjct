@@ -28,3 +28,24 @@ cd src/GreetingsBot && run
 ```console
 cd src/GreetingsBot/nlp.js-server && run
 ```
+
+# Customizing
+From the root directory.
+```console
+cd aero_rc && mvn clean install
+```
+
+Also from the root directory.
+```console
+cd areo_gui\areoui && npm i
+```
+
+## Running the UI 
+```console
+npm start 
+```
+
+( Open a new command line and then navigate to the previous path )
+```console
+npm run electron
+```
