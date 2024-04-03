@@ -6,56 +6,25 @@
 - node, npm ( latest LTS )
 
 ## Building the xatkit lib
-how to build the xatkit lib (follow the instructions ) : https://github.com/xatkit-bot-platform/xatkit/wiki/Build-Xatkit 
+The xatkit is included in this repo.
+To build it, follow the clear instructions in the following link : https://github.com/xatkit-bot-platform/xatkit/wiki/Build-XatkitU
 
 # Installation  
 ```console
-git clone https://github.com/enyoos/aerobot.git
+git clone https://github.com/crosemontinit/integration_prjct &&
+git submodule --update --init --recursive
+```
+
+## Running the XATKIT bot
+```console
+cd integration_prjct
 ```
 
 ```console
-cd areobot
+cd src/GreetingsBot && run
 ```
 
+## Running the nlp js server
 ```console
-npm i
+cd src/GreetingsBot/nlp.js-server && run
 ```
-
-```console
-cd src/GreetingsBot
-```
-
-```console
-mvn clean install
-```
-
-```console
-cd nlp.js-server
-```
-
-```console
-npm i
-```
-
-navigate to the root directory using :
-```console
-cd .. && cd.. && cd ..
-```
-
-# Execution
-
-## Running react Server
-```console
-npm start
-```
-
-## Running Chat Bot server
-```console
-cd src/GreetingsBot && mvn clean compile && mvn exec:java -Dexec.mainClass="com.xatkit.example.GreetingsBot"
-```
-
-## Running the nlp-js.server
-```console
-cd src/GreetingsBot/nlp-js.server && npm start
-```
-print ( "hello world" );
