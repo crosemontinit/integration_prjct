@@ -1,9 +1,6 @@
 [submodule "areo_gui"]
 	path = areo_gui
 	url = https://github.com/enyoos/areo_gui
-[submodule "aero_rc"]
-	path = aero_rc
-	url = https://github.com/enyoos/aero_rc
 [submodule "aerobot"]
 	path = aerobot
 	url = https://github.com/enyoos/aerobot
