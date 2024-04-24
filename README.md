@@ -8,7 +8,7 @@
 # Installation  
 ```console
 git clone https://github.com/crosemontinit/integration_prjct &&
-git submodule --update --init --recursive
+git submodule update --init --recursive
 ```
 
 ## Building the xatkit lib
