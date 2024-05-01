@@ -1,54 +1,51 @@
 #  AreoBot
 
-# Requirements
-- jdk 8
-- mvn ( preferrably the latest )
-- node, npm ( latest LTS )
+## Requirements
+- jdk 8 ( to build the xatkit library ) and jdk 11 ( to run the bot )
+- mvn ( the latest version )
+- node.js and yarn or npm ( latest LTS )
 
-# Installation  
+## Installation  
+Cloning the repository.
 ```console
-git clone https://github.com/crosemontinit/integration_prjct &&
+git clone https://github.com/crosemontinit/integration_prjct
+```
+
+Pulling the submodules.
+```console
 git submodule update --init --recursive
 ```
 
+Updating the submodules to the latest changes.
+```console
+git submodule update --recursive --remote
+```
+
 ## Building the xatkit lib
-The xatkit library is installed by default in this repo.
-To build it :
+( If you're on linux/macOS use the <cd> command instead of <pushd> or <popd> )
 ```console
-cd xatkit && mvn clean install -DskipTests
+pushd xatkit && mvn clean install -DskipTests
 ```
-
-## Server side setup
-```console
-cd integration_prjct
-```
-
+<!-- 
+# Setting up the server bot.
 ```console
 cd src/GreetingsBot && run
+``` -->
+
+## Running the NLP.js server
+Note : This server will bind on the 6666 port.
+Make sure that the port 6666 is available.
+```console
+cd src/GreetingsBot/nlp.js-server && npm start
+```
+## Running the UI/electron application ( areo_gui )
+Start the electron application.
+```console
+cd areo_gui/areoui && npm run electron
 ```
 
-## Running the nlp js server
+Start the React application.
+Note : this will start a browser. Feel free to close it.
 ```console
-cd src/GreetingsBot/nlp.js-server && run
-```
-
-# Customizing
-From the root directory.
-```console
-cd aero_rc && mvn clean install
-```
-
-Also from the root directory.
-```console
-cd areo_gui\areoui && npm i
-```
-
-## Running the UI 
-```console
-npm start 
-```
-
-( Open a new command line and then navigate to the previous path )
-```console
-npm run electron
+cd areo_gui/areoui && npm start
 ```
